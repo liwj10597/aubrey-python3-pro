@@ -70,3 +70,40 @@ print (list[1:3])       # 从第二个开始输出到第三个元素
 print (list[2:])        # 输出从第三个元素开始的所有元素
 print (tinylist * 2)    # 输出两次列表
 print (list + tinylist) # 连接列表
+
+# 为多个变量赋值
+a = b = c = 1001
+print(a, b, c)
+
+#为多个变量指定多个对象
+a, b, c = 1, 2, "li"
+print(a, b, c)
+
+#元组 元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 () 里，元素之间用逗号隔开。元组中的元素类型也可以不相同
+tuple = ("li", "wei", "jun", 1001)
+print(tuple) #输出完整元组
+print(tuple[0])#输出元组第一个元素
+print(tuple[1:3])#输出第二个元素到第三个元素
+print (tuple[2:])# 输出从第三个元素开始的所有元素
+print(tuple * 2)#输出元组两次
+
+#set集合
+student = {'Tom', 'Jim', 'Mary', 'Tom', 'Jack', 'Rose'}
+
+print(student)  # 输出集合，重复的元素被自动去掉
+
+# 成员测试
+if 'Rose' in student:
+    print('Rose 在集合中')
+else:
+    print('Rose 不在集合中')
+
+# set可以进行集合运算
+a = set('abracadabra')
+b = set('alacazam')
+print(a)
+print(b)
+print(a - b)  # a 和 b 的差集
+print(a | b)  # a 和 b 的并集
+print(a & b)  # a 和 b 的交集
+print(a ^ b)  # a 和 b 中不同时存在的元素
