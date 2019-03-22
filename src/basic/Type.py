@@ -107,3 +107,45 @@ print(a - b)  # a 和 b 的差集
 print(a | b)  # a 和 b 的并集
 print(a & b)  # a 和 b 的交集
 print(a ^ b)  # a 和 b 中不同时存在的元素
+
+#除法  / 得到一个浮点数   // 得到一个整数
+a = 2
+b = 4
+print(2 / 4)
+print(2 // 4)
+
+#集合
+student = {"aubrey", "liweijun"}
+print(student)
+if "aubrey" in student:
+    print("aubrey在集合中")
+else:
+    print("aubrey不在集合中")
+
+#set可以进行集合运算
+aSet = set("abcde")
+bSet = set("bcdef")
+print(aSet)
+
+print(aSet - bSet)#差集
+print(aSet | bSet)#并集
+print(aSet & bSet)#交集
+print(aSet ^ bSet)#不同时存在的
+
+
+#字典
+dict = {}
+dict['one'] = 1
+dict[2] = 2
+
+tinydict = {'name': 'runoob', 'code': 1, 'site': 'www.runoob.com'}
+
+print(dict['one'])  # 输出键为 'one' 的值
+print(dict[2])  # 输出键为 2 的值
+print(tinydict)  # 输出完整的字典
+print(tinydict.keys())  # 输出所有键
+print(tinydict.values())  # 输出所有值
+
+#数据类型转换，只需要将数据类型作为函数名即可
+print(float(a))
+
