@@ -69,3 +69,23 @@ print(list_names2)
 list_names[2][0] = "高"
 print(list_names)
 print(list_names2)
+
+# 列表推导式
+vec = [2, 4, 6]
+vec_two = [3 * x for x in vec]
+print("vec_two=", vec_two)
+
+vec_four = [3*x for x in vec if x > 3]
+print("vec_four=", vec_four)
+
+vec_three = [[x, x**2] for x in vec]
+print("vec_three=", vec_three)
+
+freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']
+freshfruit_two = [weapon.strip() for weapon in freshfruit]
+print("freshfruit_two=", freshfruit_two)
+
+# 矩阵转化
+matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+matrix_z = [[row[i] for row in matrix] for i in range(4)]
+print(matrix_z)
