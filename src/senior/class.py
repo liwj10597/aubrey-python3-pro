@@ -1,5 +1,7 @@
 #! /usr/bin/python3
 
+import builtins
+
 
 class people:
     name = ''
@@ -56,3 +58,36 @@ class sample(speaker, student):
 
 test = sample("Tim", 25, 80, 4, "Python")
 test.speak()  # 方法名同，默认调用的是在括号中排前地父类的方法
+
+
+class Parent:  # 定义父类
+    def myMethod(self):
+        print('调用父类方法')
+
+
+class Child(Parent):  # 定义子类
+    def myMethod(self):
+        super(Child, self).myMethod();
+        print('调用子类方法')
+
+
+c = Child()  # 子类实例
+c.myMethod()  # 子类调用重写方法
+super(Child, c).myMethod()  # 用子类对象调用父类已被覆盖的方法
+
+dir(builtins)
+
+
+# 当内部作用域想修改外部作用域的变量时，就要用到global和nonlocal关键字了
+num = 1
+
+
+def fun1():
+    global num  # 需要使用 global 关键字声明
+    print(num)
+    num = 123
+    print(num)
+
+
+fun1()
+print(num)
