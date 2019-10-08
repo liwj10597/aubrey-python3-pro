@@ -34,5 +34,5 @@ a, b = 1, 2
 a, b = b, a + b
 print(a, b)
 
-for i in range(-10, -100, -30):
+for i in range(-10, -100, -w30):
     print(i)
